@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  }
+}
+//para llegar a las rutas más rápidamente
