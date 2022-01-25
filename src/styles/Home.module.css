@@ -1,5 +1,6 @@
 .container {
-  padding: 0 2rem;
+  background: linear-gradient(to bottom, #fde34d, #f8e784d7, #ecdc82);
+  min-height: 100vh;
 }
 
 .main {
@@ -106,6 +107,16 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+.bgNew {
+  background: linear-gradient(to bottom, #fde34d, #eee29cd7, #ecdc82);
+  min-height: 100vh;
+}
+
+.backgroundSign {
+  background: linear-gradient(to bottom, #e23e29, #ee6a58, #e4a8a0ef);
+  height: 100vh;
 }
 
 @media (max-width: 600px) {

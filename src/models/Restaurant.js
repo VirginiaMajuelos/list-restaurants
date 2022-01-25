@@ -18,13 +18,17 @@ const restaurantSchema = new Schema(
       type: String,
       required: [true, "The description is required "],
       trim: true,
-      maxlength: [200, "title cannot be grater than 200 characters"],
+      maxlength: [500, "title cannot be grater than 200 characters"],
     },
     location: {
       type: String,
       requiered: [true, "The location is required "],
       trim: true,
       maxlength: [30, "title cannot be grater than 40 characters"],
+    },
+    imageUser: {
+      type: String,
+      default: "../styles/assets/restaurant-default.jpg",
     },
   },
   {
@@ -34,4 +38,3 @@ const restaurantSchema = new Schema(
 );
 
 export default models.Restaurant || model("Restaurant", restaurantSchema);
-// export default models.Task || model("Task", TaskSchema);

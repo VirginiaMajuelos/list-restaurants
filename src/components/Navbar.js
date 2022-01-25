@@ -21,9 +21,19 @@ export const Navbar = () => {
               inverted
               color="yellow"
               size="mini"
-              onClick={() => router.push("/restaurants/new")}
+              onClick={() => router.push("/signup")}
             >
-              New Restaurant
+              Sign Up
+            </Button>
+          </Menu.Item>
+          <Menu.Item>
+            <Button
+              inverted
+              color="yellow"
+              size="mini"
+              onClick={() => router.push("/login")}
+            >
+              Log In
             </Button>
           </Menu.Item>
         </Menu.Menu>
