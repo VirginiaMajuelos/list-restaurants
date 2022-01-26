@@ -28,5 +28,3 @@ export default async function handler(req, res) {
       return res.status(400).json({ msg: "this method is not supported" });
   }
 }
-
-// obtener tareas y enviar tareas

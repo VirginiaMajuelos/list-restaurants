@@ -105,82 +105,74 @@ const NewRestaurant = () => {
   return (
     <div className={styles.bgNew}>
       <Navbar />
-      <Grid
-        centered
-        verticalAlign="middle"
-        columns="3"
-        style={{ height: "80vh" }}
-      >
-        <Grid.Row>
-          <Grid.Column textAlign="left">
-            <Segment inverted style={{ padding: "25px" }}>
-              <h1>{query.id ? "UPDATE RESTAURANT" : "CREATE A RESTAURANT"}</h1>
-              <Form inverted onSubmit={handleSubmit}>
-                <Form.Input
-                  error={
-                    errors.title
-                      ? { content: "Please enter a title", pointing: "below" }
-                      : null
-                  }
-                  label="Title"
-                  placeholder="Title"
-                  name="title"
-                  onChange={handleChange}
-                  value={newRestaurant.title}
-                />
-                <Form.Input
-                  error={
-                    errors.cuisine
-                      ? {
-                          content: "Please enter a type of cuisine",
-                          pointing: "below",
-                        }
-                      : null
-                  }
-                  label="Cuisine"
-                  placeholder="Type of cuisine"
-                  name="cuisine"
-                  onChange={handleChange}
-                  value={newRestaurant.cuisine}
-                />
-                <Form.TextArea
-                  error={
-                    errors.description
-                      ? {
-                          content: "Please enter a description",
-                          pointing: "below",
-                        }
-                      : null
-                  }
-                  label="Description"
-                  placeholder="Description"
-                  name="description"
-                  onChange={handleChange}
-                  value={newRestaurant.description}
-                />
-                <Form.Input
-                  error={
-                    errors.location
-                      ? {
-                          content: "Please enter a location",
-                          pointing: "below",
-                        }
-                      : null
-                  }
-                  label="Location"
-                  placeholder="Location"
-                  name="location"
-                  onChange={handleChange}
-                  value={newRestaurant.location}
-                />
-                <Button inverted color="yellow" type="submit">
-                  {query.id ? "Update" : "Create"}
-                </Button>
-              </Form>
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+
+      <div className={styles.containerCard}>
+        <div className={styles.cardForm}>
+          <h1>{query.id ? "UPDATE RESTAURANT" : "CREATE A RESTAURANT"}</h1>
+          <Form inverted onSubmit={handleSubmit}>
+            <Form.Input
+              error={
+                errors.title
+                  ? { content: "Please enter a title", pointing: "below" }
+                  : null
+              }
+              label="Title"
+              placeholder="Title"
+              name="title"
+              onChange={handleChange}
+              value={newRestaurant.title}
+            />
+            <Form.Input
+              error={
+                errors.cuisine
+                  ? {
+                      content: "Please enter a type of cuisine",
+                      pointing: "below",
+                    }
+                  : null
+              }
+              label="Cuisine"
+              placeholder="Type of cuisine"
+              name="cuisine"
+              onChange={handleChange}
+              value={newRestaurant.cuisine}
+            />
+            <Form.TextArea
+              // error={
+              //   errors.description
+              //     ? {
+              //         content: "Please enter a description",
+              //         pointing: "below",
+              //       }
+              //     : null
+              // }
+              label="Description"
+              placeholder="Description"
+              name="description"
+              onChange={handleChange}
+              value={newRestaurant.description}
+            />
+            <Form.Input
+              // error={
+              //   errors.location
+              //     ? {
+              //         content: "Please enter a location",
+              //         pointing: "below",
+              //       }
+              //     : null
+              // }
+              label="Location"
+              placeholder="Location"
+              name="location"
+              onChange={handleChange}
+              value={newRestaurant.location}
+            />
+            <Button inverted color="yellow" type="submit">
+              {query.id ? "Update" : "Create"}
+            </Button>
+          </Form>
+        </div>
+      </div>
     </div>
   );
 };

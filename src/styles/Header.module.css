@@ -1,12 +1,13 @@
-.container {
+.containerHeader {
   text-align: center;
   display: block;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 0;
+  margin: 10px 0;
 }
 
 .favBackground {
-  background-color: #ee503c;
+  background-color: #bb3430;
   height: 100vh;
   margin-top: 35px;
   display: flex;
@@ -87,6 +88,7 @@
 .loader:after {
   left: 3.5em;
 }
+
 @-webkit-keyframes load7 {
   0%,
   80%,
@@ -111,5 +113,26 @@
 @media (max-width: 600px) {
   .title {
     font-size: 4em;
+  }
+}
+
+@media (max-width: 390px) {
+  .favBackground {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imageBack {
+    width: 60%;
+    height: 60%;
+  }
+
+  .footer {
+    margin-top: -26px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
   }
 }

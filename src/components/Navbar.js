@@ -12,7 +12,7 @@ export const Navbar = () => {
       <Container>
         <Menu.Item>
           <Link href="/">
-            <Image src={logo} alt="logo" width={80} height={30} />
+            <Image src={logo} alt="logo" width={80} height={40} />
           </Link>
         </Menu.Item>
         <Menu.Menu position="right">

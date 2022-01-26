@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import restaurantDefault from "../../../styles/assets/restaurant2.jpeg";
 import { Navbar } from "components/Navbar";
+import styles from "../../../styles/Home.module.css";
 
 export default function RestaurantDetail({ restaurant, error }) {
   const [confirm, setConfirm] = useState(false);
@@ -36,44 +37,76 @@ export default function RestaurantDetail({ restaurant, error }) {
     return <Error statusCode={error.statusCode} title={error.statusText} />;
 
   return (
-    <div>
+    <div className={styles.bgNew}>
       <Navbar />
-      <Grid
-        centered
-        verticalAlign="middle"
-        columns="3"
-        style={{ height: "80vh" }}
-      >
-        <Grid.Row>
-          <Segment inverted style={{ padding: "30px", margin: "25px" }}>
-            <Grid.Column>
-              <Image
-                src={restaurantDefault}
-                alt="img default"
-                width={700}
-                height={400}
-              ></Image>
-            </Grid.Column>
-            <Grid.Column textAlign="center">
-              <h1>{restaurant.title}</h1>
-              <p>{restaurant.cuisine}</p>
-              <p>{restaurant.description}</p>
-              <p>{restaurant.location}</p>
-              <Button color="red" onClick={open} loading={isDeliting}>
-                Delete
-              </Button>
-              <Button onClick={() => push("/")}>Back</Button>
-            </Grid.Column>
-          </Segment>
-        </Grid.Row>
-        <Confirm
-          content={`Are you sure to delete the restaurant ${restaurant.title}`}
-          header="Please confirm"
-          open={confirm}
-          onConfirm={handleDelete}
-          onCancel={close}
-        />
-      </Grid>
+      <div className={styles.containerCard}>
+        <div className={styles.cardDetails}>
+          <div>
+            <Image
+              src={restaurantDefault}
+              alt="img default"
+              width={700}
+              height={350}
+            ></Image>
+          </div>
+          <div className={styles.cardDetailsText}>
+            <h1>{restaurant.title}</h1>
+            <h4>
+              <bold>Type of cuisine:</bold>
+            </h4>
+            <p>{restaurant.cuisine}</p>
+            <h4>
+              <bold>Description of restaurant:</bold>
+            </h4>
+            <p>{restaurant.description}</p>
+            <h4>
+              <bold>Location:</bold>
+            </h4>
+            <p>{restaurant.location}</p>
+            <Button onClick={() => push("/")}>Back</Button>
+            <Button color="red" onClick={open} loading={isDeliting}>
+              Delete
+            </Button>
+          </div>
+        </div>
+
+        {/* <Grid
+          centered
+          verticalAlign="middle"
+          columns="3"
+          style={{ height: "80vh" }}
+        >
+          <Grid.Row>
+            <Segment inverted style={{ padding: "30px", margin: "25px" }}>
+              <Grid.Column>
+                <Image
+                  src={restaurantDefault}
+                  alt="img default"
+                  width={700}
+                  height={400}
+                ></Image>
+              </Grid.Column>
+              <Grid.Column textAlign="center">
+                <h1>{restaurant.title}</h1>
+                <p>{restaurant.cuisine}</p>
+                <p>{restaurant.description}</p>
+                <p>{restaurant.location}</p>
+                <Button color="red" onClick={open} loading={isDeliting}>
+                  Delete
+                </Button>
+                <Button onClick={() => push("/")}>Back</Button>
+              </Grid.Column>
+            </Segment>
+          </Grid.Row>
+          <Confirm
+            content={`Are you sure to delete the restaurant ${restaurant.title}`}
+            header="Please confirm"
+            open={confirm}
+            onConfirm={handleDelete}
+            onCancel={close}
+          />
+        </Grid> */}
+      </div>
     </div>
   );
 }

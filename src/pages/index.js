@@ -9,6 +9,7 @@ import { Navbar } from "components/Navbar";
 import { Footer } from "components/Footer";
 import { Loading } from "components/Loading";
 import { GoFavorites } from "components/GoFavorites";
+import FavoriteButton from "components/FavoriteButton";
 
 export default function HomePage({ restaurants }) {
   const [loading, setLoading] = useState(false);
@@ -25,7 +26,7 @@ export default function HomePage({ restaurants }) {
 
   if (restaurants.length === 0)
     return (
-      <>
+      <div className={styles.container}>
         <Navbar />
         <Grid
           centered
@@ -46,7 +47,7 @@ export default function HomePage({ restaurants }) {
           </Grid.Row>
         </Grid>
         <Footer />
-      </>
+      </div>
     );
 
   if (loading) {
@@ -55,9 +56,6 @@ export default function HomePage({ restaurants }) {
         <Navbar />
         <Header />
         <Loading />
-        <Container
-          style={{ paddingLeft: "80px", paddingRight: "80px" }}
-        ></Container>
         <GoFavorites />
         <Footer />
       </div>
@@ -67,7 +65,43 @@ export default function HomePage({ restaurants }) {
       <div className={styles.container}>
         <Navbar />
         <Header />
-        <Container style={{ paddingLeft: "80px", paddingRight: "80px" }}>
+        <div className={styles.containerCard}>
+          {restaurants.map((restaurant) => (
+            <div key={restaurant._id} className={styles.card}>
+              <h2>{restaurant.title}</h2>
+              <hr></hr>
+              <div>
+                <p>{restaurant.description}</p>
+              </div>
+              <FavoriteButton />
+              <Button
+                inverted
+                color="yellow"
+                onClick={() => router.push(`/restaurants/${restaurant._id}`)}
+              >
+                View
+              </Button>
+              <Button
+                inverted
+                color="yellow"
+                onClick={() =>
+                  router.push(`/restaurants/${restaurant._id}/edit`)
+                }
+              >
+                Edit
+              </Button>
+            </div>
+          ))}
+        </div>
+        <GoFavorites />
+        <Footer />
+      </div>
+    );
+  }
+}
+
+{
+  /* <Container style={{ paddingLeft: "80px", paddingRight: "80px" }}>
           <Card.Group itemsPerRow={1}>
             {restaurants.map((restaurant) => (
               <Card key={restaurant._id}>
@@ -98,12 +132,7 @@ export default function HomePage({ restaurants }) {
               </Card>
             ))}
           </Card.Group>
-        </Container>
-        <GoFavorites />
-        <Footer />
-      </div>
-    );
-  }
+        </Container> */
 }
 
 export const getServerSideProps = async (ctx) => {

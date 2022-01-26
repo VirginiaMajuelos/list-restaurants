@@ -6,9 +6,30 @@ import styles from "../styles/Home.module.css";
 
 export default function login() {
   return (
-    <div className={styles.bgNew}>
+    <div className={styles.backgroundSign}>
       <Navbar />
-      <Grid
+
+      <div className={styles.containerCard}>
+        <div className={styles.cardFormRegister}>
+          <h1>LOG IN</h1>
+          <Form inverted>
+            <Form.Input
+              label="Email"
+              placeholder="example@gmail.com"
+              name="email"
+              //   onChange={handleChange}
+              //   value={newUser.email}
+            />
+            <Form.Input
+              label="Password"
+              placeholder="***********"
+              name="password"
+              //   onChange={handleChange}
+              //   value={newUser.password}
+            />
+            <Button type="submit">Let`s Go!</Button>
+          </Form>
+          {/* <Grid
         centered
         verticalAlign="middle"
         columns="3"
@@ -18,27 +39,12 @@ export default function login() {
           <Grid.Column textAlign="left">
             <Segment inverted style={{ padding: "25px" }}>
               <h1>Log in</h1>
-              <Form inverted>
-                <Form.Input
-                  label="Email"
-                  placeholder="example@gmail.com"
-                  name="email"
-                  //   onChange={handleChange}
-                  //   value={newUser.email}
-                />
-                <Form.Input
-                  label="Password"
-                  placeholder="***********"
-                  name="password"
-                  //   onChange={handleChange}
-                  //   value={newUser.password}
-                />
-                <Button type="submit">Let`s Go!</Button>
-              </Form>
             </Segment>
           </Grid.Column>
         </Grid.Row>
-      </Grid>
+      </Grid> */}
+        </div>
+      </div>
     </div>
   );
 }

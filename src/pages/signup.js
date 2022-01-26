@@ -1,21 +1,18 @@
 import { Button, Grid, Form, Segment } from "semantic-ui-react";
-import Image from "next/image";
 import { Navbar } from "components/Navbar";
 import styles from "../styles/Home.module.css";
-import pun from "../styles/assets/punHeader.png";
 
 export default function signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const email = emailRef.current.value;
+
     const password = passwordRef.current.value;
-    //Validation
     if (!email || !email.includes("@") || !password) {
       alert("Invalid details");
       return;
     }
-    //POST form values
-    const res = await fetch("/api/auth/signup", {
+    const res = await fetch("/api/users/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +22,6 @@ export default function signup() {
         password: password,
       }),
     });
-    //Await for data for any desirable next steps
     const data = await res.json();
     console.log(data);
   };
@@ -35,7 +31,43 @@ export default function signup() {
   return (
     <div className={styles.backgroundSign}>
       <Navbar />
-      <Grid
+
+      <div className={styles.containerCard}>
+        <div className={styles.cardFormRegister}>
+          <h1>SIGN UP</h1>
+          <Form inverted onSubmit={handleSubmit}>
+            <Form.Input
+              // error={
+              //   errors.email
+              //     ? { content: "Please enter your email", pointing: "below" }
+              //     : null
+              // }
+              label="Email"
+              placeholder="example@gmail.com"
+              name="email"
+              onChange={handleChange}
+              // value="email"
+            />
+            <Form.Input
+              // error={
+              //   errors.password
+              //     ? {
+              //         content: "Please enter a password",
+              //         pointing: "below",
+              //       }
+              //     : null
+              // }
+              label="Password"
+              placeholder="***********"
+              name="password"
+              onChange={handleChange}
+              // value="password"
+            />
+            <Button type="submit">Save</Button>
+          </Form>
+        </div>
+      </div>
+      {/* <Grid
         centered
         verticalAlign="middle"
         columns="3"
@@ -57,7 +89,7 @@ export default function signup() {
                   placeholder="example@gmail.com"
                   name="email"
                   onChange={handleChange}
-                  // value={newUser.email}
+                  value="email"
                 />
                 <Form.Input
                   // error={
@@ -72,14 +104,14 @@ export default function signup() {
                   placeholder="***********"
                   name="password"
                   onChange={handleChange}
-                  // value={newUser.password}
+                  value="password"
                 />
                 <Button type="submit">Save</Button>
               </Form>
             </Segment>
           </Grid.Column>
         </Grid.Row>
-      </Grid>
+      </Grid> */}
     </div>
   );
 }
