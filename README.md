@@ -1,9 +1,7 @@
 
 ## Restaurant App
 
-<iframe src="https://giphy.com/embed/i2iI9c0F26MyWWfURh" width="480" height="314" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/i2iI9c0F26MyWWfURh">via GIPHY</a></p>
-
-<img src="server/public/demo.gif" alt="drawing" style="width:500px"/>
+<img src="/src/styles/assets/giphy.gif" alt="demo" style="width:500px"/>
 
 ## Description
 
@@ -41,6 +39,6 @@ Server .env
 
 MONGODB_URL=mongodb://localhost:3000/restaurants
 
-##Other date:
+## Other date:
 
 I learn about Next Js and I've done this project in 6 days. 
