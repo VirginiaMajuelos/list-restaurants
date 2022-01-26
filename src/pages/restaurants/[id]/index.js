@@ -67,6 +67,13 @@ export default function RestaurantDetail({ restaurant, error }) {
             <Button color="red" onClick={open} loading={isDeliting}>
               Delete
             </Button>
+            <Confirm
+              content={`Are you sure to delete the restaurant ${restaurant.title}`}
+              header="Please confirm"
+              open={confirm}
+              onConfirm={handleDelete}
+              onCancel={close}
+            />
           </div>
         </div>
 
