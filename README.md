@@ -40,4 +40,9 @@ MONGODB_URL=mongodb://localhost:3000/restaurants
 
 ## Other date:
 
+<<<<<<< HEAD
 I learn about Next Js and I've done this project in 6 days.
+=======
+I learn about Next Js and I've done this project in 6 days.
+
+> > > > > > > f2aed8c623e1531c1412189faf6ceee7ea424baa
