@@ -67,51 +67,7 @@ export default function signup() {
           </Form>
         </div>
       </div>
-      {/* <Grid
-        centered
-        verticalAlign="middle"
-        columns="3"
-        style={{ height: "80vh" }}
-      >
-        <Grid.Row>
-          <Grid.Column textAlign="left">
-            <Segment inverted style={{ padding: "25px" }}>
-              <Image src={pun} alt="imageHeader" width={80} height={80} />
-              <h1>Sign Up</h1>
-              <Form inverted onSubmit={handleSubmit}>
-                <Form.Input
-                  // error={
-                  //   errors.email
-                  //     ? { content: "Please enter your email", pointing: "below" }
-                  //     : null
-                  // }
-                  label="Email"
-                  placeholder="example@gmail.com"
-                  name="email"
-                  onChange={handleChange}
-                  value="email"
-                />
-                <Form.Input
-                  // error={
-                  //   errors.password
-                  //     ? {
-                  //         content: "Please enter a password",
-                  //         pointing: "below",
-                  //       }
-                  //     : null
-                  // }
-                  label="Password"
-                  placeholder="***********"
-                  name="password"
-                  onChange={handleChange}
-                  value="password"
-                />
-                <Button type="submit">Save</Button>
-              </Form>
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid> */}
     </div>
   );
 }
+

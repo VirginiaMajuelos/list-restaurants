@@ -8,7 +8,7 @@ const Cards = ({ restaurants }) => {
   return (
     <div className={styles.containerCard}>
       <div className={styles.card}>
-        <h4>Titulo</h4>
+        <h4>Title</h4>
         <div>
           <p></p>
         </div>

@@ -100,41 +100,6 @@ export default function HomePage({ restaurants }) {
   }
 }
 
-{
-  /* <Container style={{ paddingLeft: "80px", paddingRight: "80px" }}>
-          <Card.Group itemsPerRow={1}>
-            {restaurants.map((restaurant) => (
-              <Card key={restaurant._id}>
-                <Card.Content>
-                  <Card.Header>{restaurant.title}</Card.Header>
-                  <p>{restaurant.description}</p>
-                </Card.Content>
-                <Card.Content extra>
-                  <Button
-                    inverted
-                    color="yellow"
-                    onClick={() =>
-                      router.push(`/restaurants/${restaurant._id}`)
-                    }
-                  >
-                    View
-                  </Button>
-                  <Button
-                    inverted
-                    color="yellow"
-                    onClick={() =>
-                      router.push(`/restaurants/${restaurant._id}/edit`)
-                    }
-                  >
-                    Edit
-                  </Button>
-                </Card.Content>
-              </Card>
-            ))}
-          </Card.Group>
-        </Container> */
-}
-
 export const getServerSideProps = async (ctx) => {
   const res = await fetch("http://localhost:3000/api/restaurants");
   const restaurants = await res.json();
@@ -145,6 +110,3 @@ export const getServerSideProps = async (ctx) => {
     },
   };
 };
-
-//1 se ejecuta getServerSideProps y después pinta lo de arriba. Es como use efect, por asi decirlo
-//Basicamente la primera parte es frontend y la segunda es la petición o gestión en el backend

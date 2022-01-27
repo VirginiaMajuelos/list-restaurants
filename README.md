@@ -4,9 +4,9 @@
 
 ## Description
 
-Restaurant App it is a website about restaurant. You can find a list the restaurants in the city, create, edit and delete (CRUD) with API REST in Mongo DB.
+This is my first web-app with NEXT JS in mobile first.
 
-This is my first web-app with NEXT JS in mobile first
+Restaurant App it is a website about restaurants list. You can find a list the restaurants in the city,read details, create a new restaurant, edit and delete (CRUD) with API REST in Mongo DB.
 
 Try demo: ...
 
@@ -34,15 +34,10 @@ npm run dev
 
 You can read the restaurant.json file that you will find in the data folder to your database to have the catalog or you can add new restaurant
 
-Server .env
+Server: .env
 
 MONGODB_URL=mongodb://localhost:3000/restaurants
 
 ## Other date:
 
-<<<<<<< HEAD
-I learn about Next Js and I've done this project in 6 days.
-=======
-I learn about Next Js and I've done this project in 6 days.
-
-> > > > > > > f2aed8c623e1531c1412189faf6ceee7ea424baa
+I learn about Next Js and I've done this project in 5-6 days.

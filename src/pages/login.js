@@ -29,20 +29,6 @@ export default function login() {
             />
             <Button type="submit">Let`s Go!</Button>
           </Form>
-          {/* <Grid
-        centered
-        verticalAlign="middle"
-        columns="3"
-        style={{ height: "80vh" }}
-      >
-        <Grid.Row>
-          <Grid.Column textAlign="left">
-            <Segment inverted style={{ padding: "25px" }}>
-              <h1>Log in</h1>
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid> */}
         </div>
       </div>
     </div>

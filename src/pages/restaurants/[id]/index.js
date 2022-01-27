@@ -76,43 +76,6 @@ export default function RestaurantDetail({ restaurant, error }) {
             />
           </div>
         </div>
-
-        {/* <Grid
-          centered
-          verticalAlign="middle"
-          columns="3"
-          style={{ height: "80vh" }}
-        >
-          <Grid.Row>
-            <Segment inverted style={{ padding: "30px", margin: "25px" }}>
-              <Grid.Column>
-                <Image
-                  src={restaurantDefault}
-                  alt="img default"
-                  width={700}
-                  height={400}
-                ></Image>
-              </Grid.Column>
-              <Grid.Column textAlign="center">
-                <h1>{restaurant.title}</h1>
-                <p>{restaurant.cuisine}</p>
-                <p>{restaurant.description}</p>
-                <p>{restaurant.location}</p>
-                <Button color="red" onClick={open} loading={isDeliting}>
-                  Delete
-                </Button>
-                <Button onClick={() => push("/")}>Back</Button>
-              </Grid.Column>
-            </Segment>
-          </Grid.Row>
-          <Confirm
-            content={`Are you sure to delete the restaurant ${restaurant.title}`}
-            header="Please confirm"
-            open={confirm}
-            onConfirm={handleDelete}
-            onCancel={close}
-          />
-        </Grid> */}
       </div>
     </div>
   );

@@ -138,14 +138,14 @@ const NewRestaurant = () => {
               value={newRestaurant.cuisine}
             />
             <Form.TextArea
-              // error={
-              //   errors.description
-              //     ? {
-              //         content: "Please enter a description",
-              //         pointing: "below",
-              //       }
-              //     : null
-              // }
+              error={
+                errors.description
+                  ? {
+                      content: "Please enter a description",
+                      pointing: "below",
+                    }
+                  : null
+              }
               label="Description"
               placeholder="Description"
               name="description"
@@ -153,14 +153,14 @@ const NewRestaurant = () => {
               value={newRestaurant.description}
             />
             <Form.Input
-              // error={
-              //   errors.location
-              //     ? {
-              //         content: "Please enter a location",
-              //         pointing: "below",
-              //       }
-              //     : null
-              // }
+              error={
+                errors.location
+                  ? {
+                      content: "Please enter a location",
+                      pointing: "below",
+                    }
+                  : null
+              }
               label="Location"
               placeholder="Location"
               name="location"

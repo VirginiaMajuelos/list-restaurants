@@ -13,13 +13,7 @@ const userSchema = new Schema(
       required: [true, "The password is required"],
     },
 
-    // imageUser: {
-    //   type: String,
-    //   default:
-    //     "https://res.cloudinary.com/dhn7lkwbd/image/upload/v1639589185/legooo_xtsb5y.jpg",
-    // },
-
-    productLike: [
+    productFavourite: [
       {
         type: Schema.Types.ObjectId,
         ref: "Restaurant",
